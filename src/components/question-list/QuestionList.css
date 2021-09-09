@@ -1,0 +1,30 @@
+.question-list {
+  width: 100%;
+}
+
+.question-list-item{
+  box-sizing: content-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #61DAFB;
+  border-radius: 5px;
+}
+
+.question-list-item:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.question-list-item__question, .question-list-item__answer {
+  box-sizing: border-box;
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+  word-break: break-all;
+}
+
+.question-list-item__question {
+  font-weight: bold;
+  border-bottom: 1px dashed #61DAFB;
+}

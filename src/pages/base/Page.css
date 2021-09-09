@@ -9,7 +9,8 @@
 
 .page-content{
   margin: auto;
-  max-width: 500px;
+  padding: 0px 10%;
+  max-width: 1000px;
 }
 
 .page-header__title{

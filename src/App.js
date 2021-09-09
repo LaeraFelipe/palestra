@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
-import Register from "./pages/register/Register";
 import { useEffect, useState } from "react";
 import "./App.css";
+import logo from "./logo.svg";
 import Question from "./pages/question/Question";
+import Register from "./pages/register/Register";
 
 function App() {
   const [user, setUser] = useState();
@@ -29,7 +29,7 @@ function App() {
         </p>
       </header>
       <div className="content">
-        {user ? <Question /> : <Register onRegister={handleRegister} />}
+        {user ? <Question user={user} /> : <Register onRegister={handleRegister} />}
       </div>
       <div className="footer">
         <p>{user && `Olá ${user.name.split(' ')[0]}`}</p>
