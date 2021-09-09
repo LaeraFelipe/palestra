@@ -1,6 +1,13 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
 .header {
   background: #282c34;
-  height: 30vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,20 +28,20 @@
 
 .content {
   background: #2f3238;
-  height: 65vh;
+  flex-grow: 1;
 }
 
 .footer {
   padding: 0px 10px;
   background: #282c34;
-  height: 5vh;
+  min-height: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .footer p {
-  font-size: 2vmin;
+  font-size: 1.2rem;
   margin: 0;
 }
 
