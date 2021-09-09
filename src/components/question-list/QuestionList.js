@@ -31,7 +31,7 @@ export function QuestionList() {
     <div className="question-list">
       {loading && <div className="question-list__loading">Carregando...</div>}
       {questions?.map((item) => (
-        <div className="question-list-item">
+        <div key={item.id} className="question-list-item">
           <div className="question-list-item__question">{item.name} - {item.question}</div>
           <div className="question-list-item__answer">Resposta - {item.answer}</div>
         </div>

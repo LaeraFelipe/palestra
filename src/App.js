@@ -43,7 +43,7 @@ function App() {
           >
             Linkedin
           </a>
-          &nbsp;
+          |
           <a
             className="link"
             href="mailto:laera.felipe@gmail.com?subject=Palestra: Primeiros passos com React"
