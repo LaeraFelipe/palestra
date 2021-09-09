@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect, useState } from "react";
 import "./App.css";
 import logo from "./logo.svg";
@@ -20,6 +21,11 @@ function App() {
     setUser(user);
   };
 
+  const handleUnregister = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+  };
+
   return (
     <div className="app">
       <header className="header">
@@ -29,10 +35,24 @@ function App() {
         </p>
       </header>
       <div className="content">
-        {user ? <Question user={user} /> : <Register onRegister={handleRegister} />}
+        {user ? (
+          <Question user={user} />
+        ) : (
+          <Register onRegister={handleRegister} />
+        )}
       </div>
       <div className="footer">
-        <p>{user && `Olá ${user.name.split(' ')[0]}`}</p>
+        <p>
+     
+          {user && `Olá ${user.name.split(" ")[0]} | `} 
+          {user && (
+            <>
+            <a className="link" href="#unregister" onClick={handleUnregister}>
+              Sair
+            </a>
+            </>
+          )}
+        </p>
         <p>
           Contatos:&nbsp;
           <a
