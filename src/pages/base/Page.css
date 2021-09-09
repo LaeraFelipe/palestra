@@ -1,0 +1,18 @@
+.page{
+  padding: 10px;
+  text-align: center;
+}
+
+.page-header{
+  text-align: center;
+}
+
+.page-content{
+  margin: auto;
+  max-width: 580px;
+}
+
+.page-header__title{
+  margin-top: 5px;
+  font-size: 3vmin;
+}

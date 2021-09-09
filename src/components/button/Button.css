@@ -1,0 +1,15 @@
+.button {
+  font-family: 'consolas';
+  margin-top: 1rem;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  background: #61DAFB;
+  outline: none !important;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:hover{
+  cursor: pointer;
+}
