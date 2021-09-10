@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect, useState } from "react";
 import "./App.css";
-import logo from "./logo.svg";
+import { Footer } from "./components/layout/footer";
+import { Header } from "./components/layout/header";
 import Question from "./pages/question/Question";
 import Register from "./pages/register/Register";
 
@@ -28,12 +29,7 @@ function App() {
 
   return (
     <div className="app">
-      <header className="header">
-        <img src={logo} className="header-logo" alt="logo" />
-        <p>
-          Primeiros passos com <code>React.js</code>
-        </p>
-      </header>
+      <Header  />
       <div className="content">
         {user ? (
           <Question user={user} />
@@ -41,37 +37,7 @@ function App() {
           <Register onRegister={handleRegister} />
         )}
       </div>
-      <div className="footer">
-        <p>
-     
-          {user && `Olá ${user.name.split(" ")[0]} | `} 
-          {user && (
-            <>
-            <a className="link" href="#unregister" onClick={handleUnregister}>
-              Sair
-            </a>
-            </>
-          )}
-        </p>
-        <p>
-          Contatos:&nbsp;
-          <a
-            className="link"
-            href="https://www.linkedin.com/in/felipe-l-9bb01ba5/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Linkedin
-          </a>
-          |
-          <a
-            className="link"
-            href="mailto:laera.felipe@gmail.com?subject=Palestra: Primeiros passos com React"
-          >
-            Email
-          </a>
-        </p>
-      </div>
+      <Footer user={user} onUnregister={handleUnregister} />
     </div>
   );
 }
